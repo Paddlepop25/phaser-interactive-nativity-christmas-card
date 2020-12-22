@@ -1,0 +1,22 @@
+<!-- form, one textline and form reads message -->
+
+<div class="form-group mt-5">
+  <form [formGroup]="form">
+    <!-- <label>Enter your Christmas 🎄 greeting</label> -->
+    <h3>Enter your Christmas 🎄 greeting</h3>
+    <input
+      type="text"
+      placeholder="e.g I appreciate you ❣️"
+      class="form-control"
+      formControlName="message"
+    />
+    <button
+      type="submit"
+      class="btn btn-warning mt-4"
+      (click)="onSubmit()"
+      [disabled]="form.invalid"
+    >
+      Send greeting
+    </button>
+  </form>
+</div>
